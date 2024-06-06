@@ -52,4 +52,4 @@ class LoanViewSet(viewsets.ModelViewSet):
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
     filter_backends = [filters.SearchFilter]
-    search_fields = ['borrower', 'book']
+    search_fields = ['borrower__name', 'borrower__email', 'book__title']
